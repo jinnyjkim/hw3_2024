@@ -107,21 +107,20 @@ footer{
 
 /* Step 1: Write selector/rule property to add an underline when
 links in the navigation are in the hover or focus state.*/
-nav:hover, nav:focus{
+li:hover, li:focus{
   text-decoration: underline;
 }
 
 /* Step 2a: Write selector/rule property to position the default position for the skip class element*/
-.skip{
-  position: fixed;
-  bottom: 40px;
-  translate: 0 -100%
+.skip a{
+  position: absolute;
+  top: -40px;
 }
 
 /* Step 2b: Write selector/rule property to position the skip class element when it is in focus*/
-.skip:focus{
+.skip a:focus{
+  position: absolute;
   top: 20px;
-  translate: 0;  
 }
 
 /* Step 3: Write selector/rule property to style all elements when in focus*/
@@ -218,9 +217,8 @@ div:first-child{
 @media only screen and (min-width: 800px){
 
   /* Step 9: Write the selector/rule property to style the nav element */
-  .nav{
-  text-align-last: end;
-  padding: 30px 0px;
+  ul{
+    text-align: end;
   }
  
   /* Step 10: Write the selector/rule property to update the .container class */
